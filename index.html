@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Mary Lash</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="basket">
+        <div class="basket__top">
+          <a href="#" class="before__link">
+            <p>Продовжити покупки</p>
+          </a>
+
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="logo" />
+          </a>
+
+          <div class="contacts">
+            <div class="contacts__item">
+              <span>Київ</span>
+              <div class="numbers">
+                <a href="#">+38 099 049 11 32</a>
+              </div>
+            </div>
+            <div class="contacts__item">
+              <span>Дніпро</span>
+              <div class="numbers">
+                <a href="#">+38 099 060 39 60</a>
+                <a href="#">+38 068 682 28 08</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="basket__body">
+          <h2 class="status__title">Оформлення замовлення</h2>
+
+          <div class="basket__content">
+            <div class="basket__sides">
+              <div class="basket__content--left">
+                <div class="basket__content--item">
+                  <div class="item__title">Особисті дані</div>
+
+                  <div class="input-wrap">
+                    <label for="">Ваше імʼя*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap">
+                    <label for="">Ваше прізвище*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap">
+                    <label for="">Телефон*</label>
+                    <input type="phone" />
+                  </div>
+
+                  <div class="input-wrap">
+                    <label for="">E-mail*</label>
+                    <input type="email" />
+                  </div>
+                </div>
+
+                <div class="basket__content--item">
+                  <div class="item__title">Інформація про доставку</div>
+
+                  <div class="input-wrap">
+                    <label for="">Варіанти доставки*</label>
+                    <div class="custom-select-wrapper" onclick="toggleCustomSelect()">
+                      <div class="custom-select">
+                        <div class="custom-select__trigger">
+                          <span>Оберіть варіанти доставки</span>
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                          <span class="custom-option" data-value="nova_poshta">Нова Пошта</span>
+                          <span class="custom-option" data-value="pickup">Самовивіз</span>
+                          <span class="custom-option" data-value="international"
+                            >Міжнародна доставка</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-wrap input-wrap--town">
+                    <label for="">Місто*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap input-wrap--country">
+                    <label for="">Країна, місто*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap input-wrap--region">
+                    <label for="">Регіон/Штат*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap input-wrap--index">
+                    <label for="">Індекс*</label>
+                    <input type="text" />
+                  </div>
+
+                  <div class="input-wrap input-wrap--department">
+                    <label for="">Відділення*</label>
+                    <div class="custom-select-wrapper" onclick="toggleCustomSelect()">
+                      <div class="custom-select">
+                        <div class="custom-select__trigger">
+                          <span>Оберіть варіанти доставки</span>
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                          <span class="custom-option">№1</span>
+                          <span class="custom-option">№2</span>
+                          <span class="custom-option">№3</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="input-wrap input-wrap--payment">
+                    <label for="">Варіанти оплати*</label>
+                    <div class="custom-select-wrapper" onclick="toggleCustomSelect()">
+                      <div class="custom-select">
+                        <div class="custom-select__trigger" id="payment">
+                          <span>Оберіть варіанти оплати</span>
+                          <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                          <span class="custom-option">Передоплата (за реквізитами)</span>
+                          <span class="custom-option">Післяплата (за передоплатою 300 грн)</span>
+                          <span class="custom-option">Оплата при отриманні</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn">Оформити замовлення</button>
+                </div>
+              </div>
+              
+            </div>
+
+            <div class="right-wrap">
+              <div class="basket__content--right">
+                <div class="header__top">
+                  <div class="header__top--content">
+                    <span>Ваше замовлення</span>
+                    <span>700 ₴ </span>
+                  </div>
+                </div>
+
+                <div class="header__content">
+                  <div class="header__content--left">
+                    <div class="header__img">
+                      <img src="images/product.png" alt="product" />
+                    </div>
+
+                    <div class="header__info">
+                      <div class="product-title">Ботокс для брів WOW Botox</div>
+
+                      <div class="product-size">
+                        <span>AntuOne</span>
+                        <span>15ml</span>
+                      </div>
+
+                      <p>700 ₴</p>
+
+                      <div class="plus-minus">
+                        <button href="#">
+                          <img src="images/minus.svg" alt="" />
+                        </button>
+                        <span>1</span>
+                        <button href="#">
+                          <img src="images/plus.svg" alt="" />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="header__content--right">
+                    <a href="#">
+                      <img src="images/trash.svg" alt="trash" />
+                    </a>
+                  </div>
+                </div>
+
+                <div class="header__footer">
+                  <div class="header__footer--item">
+                    <span>Підсумок</span>
+                    <span class="amount">700 ₴ </span>
+                  </div>
+
+                  <div class="header__footer--item">
+                    <span>Доставка</span>
+                    <span class="arrival-point">за тарифами перевізника (Нова Пошта)</span>
+                  </div>
+
+                  <div class="header__footer--item">
+                    <span class="cost">Разом</span>
+                    <span class="sum">700 ₴ </span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="comments">
+                <div class="comments__title">
+                  Додати коментар до замовлення
+                </div>
+                <textarea class="textarea" name="" id=""></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/select.js"></script>
+  </body>
+</html>
